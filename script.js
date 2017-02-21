@@ -79,6 +79,7 @@
       console.log('triangle4 --------------');
       var triangle4 = '';
       var i = 0;
+
       do {
          triangle4 += '#';
          console.log(triangle4);
@@ -87,7 +88,22 @@
 
 
 
+   // version 5
+      console.log('triangle5 --------------');
+      var triangle5 = '';
+      var j = 0;
+
+      while (j < 7) {
+         triangle5 += '#';
+         console.log(triangle5);
+         j++;
+      }
+
+
+
 // for loops - FIZZBUZZ ----------------------------------------------
+   // for loops are useful when you know how many times you want your loop to iterate
+
 
    // Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
    // When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
@@ -112,6 +128,10 @@
 
 
 // do while loops ----------------------------------------------
+   // will run the code at least once before it checks the condition
+      // if the condition is met then it will continue to run
+
+   //preferable to a for loop when we are not certain how many times we need to iterate
 
    // log 0 to 10 with 'do while loop'
    console.log('"do while" loop count to ten --------------');
@@ -125,7 +145,11 @@
 
 
 
-// do while loops ----------------------------------------------
+//  while loops ----------------------------------------------
+   // the code will check to see if the condition is met
+      // if the condition is met the code block will execute until the while statement can no longer pass
+
+   //preferable to a for loop when we are not certain how many times we need to iterate
 
    // log 0 to 10 with 'while loop'
    console.log('"while" loop count to ten --------------');
@@ -136,6 +160,54 @@
          count2++;
       }
 
+
+
+// while loops can also be used in situations where we don't deal with numbers
+
+   // Cheer Up with 'while loop'
+   console.log('"while" loop Cheer Up --------------');
+
+   var sad = confirm('Would you like to be cheered you up?');
+
+   while (sad) {
+
+      alert("What do you call a boomerang that doesn't come back? .......... A stick!");
+      var yes = confirm('Would you like another joke?');
+
+      if (yes) {
+         alert("What do you call a fake noodle? ......... An Impasta!");
+         var yes2 = confirm('Would you like to continue to be cheered up?');
+
+         if (yes2) {
+            var response = prompt('Tell us about your struggles.', 'Type your difficulties here...');
+
+            if (response) {
+               alert('Thank you, for sharing your tribulations with us. We hope you feel better soon!');
+               sad = false;
+            }
+         }
+      }
+      else {
+         sad = false;
+      }
+   }
+
+
+
+//  random number with functions ----------------------------------------------
+
+let randomNum = () => {
+   console.log(Math.floor(Math.random()*6)+1);
+};
+
+randomNum();
+
+
+var nameArr = ['anton', 'aaron', 'ariana'];
+
+nameArr.push('boris');
+
+console.log(nameArr);
 
 
 
